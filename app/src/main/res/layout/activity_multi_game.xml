@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.hangdroid.app.GameActivity" android:background="@color/white_main">
+
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="370dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/hangdroid_0"
+            android:layout_marginTop="20dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" android:id="@+id/layoutAddLetter" android:layout_marginBottom="10dp"
+            android:background="@drawable/grandient_background">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Insert letter"
+                android:id="@+id/textView2" android:layout_marginLeft="40dp" android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"/>
+        <EditText
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:id="@+id/editTextLetter"
+                android:autoText="false"
+                android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:textSize="20dp"
+                android:maxLength="1"
+                android:layout_gravity="bottom"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check letter"
+                android:id="@+id/button4" android:onClick="introduceLetter"
+                android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_above="@+id/layoutAddLetter"
+            android:layout_centerHorizontal="true" android:layout_marginBottom="20dp" android:id="@+id/layoutLetters">
+
+    </LinearLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView7" android:layout_marginTop="200dp" android:layout_marginLeft="20dp"
+            android:textColor="@color/game_red"/>
+</RelativeLayout>
